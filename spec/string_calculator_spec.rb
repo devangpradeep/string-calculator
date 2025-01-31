@@ -17,5 +17,12 @@ RSpec.describe(StringCalculator) do
         expect(calculator.add("1")).to(eq(1))
       end
     end
+
+    context "when input is a string with 2 numbers" do
+      it "returns the number" do
+        calculator = StringCalculator.new
+        expect(calculator.add("1, 5")).to(eq(6))
+      end
+    end
   end
 end
