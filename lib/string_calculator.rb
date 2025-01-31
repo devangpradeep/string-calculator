@@ -2,6 +2,8 @@
 
 class StringCalculator
   def add(numbers)
-    0
+    return 0 if numbers.nil?
+
+    numbers.to_i
   end
 end
