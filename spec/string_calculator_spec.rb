@@ -31,5 +31,12 @@ RSpec.describe(StringCalculator) do
         expect(calculator.add("1, 5, 4")).to(eq(10))
       end
     end
+
+    context "when input is a string of numbers separated by new line" do
+      it "returns the sum of 3 numbers" do
+        calculator = StringCalculator.new
+        expect(calculator.add("1\n5\n4")).to(eq(10))
+      end
+    end
   end
 end
