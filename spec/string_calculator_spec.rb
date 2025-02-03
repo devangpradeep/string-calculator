@@ -19,9 +19,16 @@ RSpec.describe(StringCalculator) do
     end
 
     context "when input is a string with 2 numbers" do
-      it "returns the number" do
+      it "returns the sum of both numbers" do
         calculator = StringCalculator.new
         expect(calculator.add("1, 5")).to(eq(6))
+      end
+    end
+
+    context "when input is a string with 3 numbers" do
+      it "returns the sum of 3 numbers" do
+        calculator = StringCalculator.new
+        expect(calculator.add("1, 5, 4")).to(eq(10))
       end
     end
   end
