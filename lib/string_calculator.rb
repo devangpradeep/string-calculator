@@ -6,8 +6,9 @@ class StringCalculator
 
     nums_int = numbers.split(/[,\n;]/).map(&:to_i)
 
-    negative = nums_int.find { |n| n < 0 }
-    raise "negative numbers not allowed: #{negative}" if negative
+    negatives = nums_int.select { |n| n < 0 }
+
+    raise "negative numbers not allowed: #{negatives.join(", ")}" if negatives.any?
 
     nums_int.sum
   end
